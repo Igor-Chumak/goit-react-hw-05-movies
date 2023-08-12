@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
-const API_KEY = '30b0102eba46f206e4cdb2df1254a2c5';
-const API_TOKEN =
+// const API_KEY = '30b0102eba46f206e4cdb2df1254a2c5';
+const ACCESS_TOKEN =
   'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMGIwMTAyZWJhNDZmMjA2ZTRjZGIyZGYxMjU0YTJjNSIsInN1YiI6IjY0ZDc2N2ZlMDAxYmJkMDBlMzViMmY3MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.arjSJ1yKD4ONmBdxPW4Nl-3pHH5kUcNLhLTD2FV7ec0';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 axios.defaults.headers = {
   accept: 'application/json',
-  Authorization: `Bearer ${API_TOKEN}`,
+  Authorization: `Bearer ${ACCESS_TOKEN}`,
 };
 // axios.defaults.params = {
 //   key: API_KEY,
@@ -42,9 +42,9 @@ export const getDataQuery = async (
   };
 
   let pathname = typeRequests[typeRequest.url];
-  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
-  const { data } = await axios.get(`${pathname}?${requestParams}`);
-  return data;
+  const requestParams = typeRequests[typeRequest].params;
+  //  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
+  return await axios.get(`${pathname}?${requestParams}`);
 };
 
 // export const getDataQuery = async (searchData, page = 1) => {
@@ -62,6 +62,8 @@ export const getDataQuery = async (
 // };
 
 getDataQuery.propType = {
-  searchData: PropTypes.string.isRequired,
-  page: PropTypes.string,
+  typeRequest: PropTypes.string.isRequired,
+  query: PropTypes.string,
+  movie_id: PropTypes.number,
+  page: PropTypes.number,
 };
