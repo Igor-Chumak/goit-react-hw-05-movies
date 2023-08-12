@@ -12,6 +12,14 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 //   per_page: 12,
 // };
 
+const typeRequests = {
+  getTrending: 'trending/movie/day',
+  searchMovies: 'search/movie',
+  movieDetails: 'movie/{movie_id}',
+  movieCredits: 'movie/{movie_id}/credits',
+  movieReviews: 'movie/{movie_id}/reviews',
+};
+
 export const getDataQuery = async (searchData, page = 1) => {
   const searchParams = new URLSearchParams({
     key: API_KEY,
