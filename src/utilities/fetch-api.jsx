@@ -28,7 +28,12 @@ export const getDataQuery = async (
     },
     searchMovies: {
       url: 'search/movie',
-      params: { language: 'en-US', query: { query } },
+      params: {
+        language: 'en-US',
+        query: { query },
+        include_adult: 'false',
+        page: { page },
+      },
     },
     movieDetails: { url: `movie/${movie_id}`, params: { language: 'en-US' } },
     movieCredits: {
@@ -44,7 +49,8 @@ export const getDataQuery = async (
   let pathname = typeRequests[typeRequest.url];
   const requestParams = typeRequests[typeRequest].params;
   //  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
-  return await axios.get(`${pathname}?${requestParams}`);
+  const { data } = await axios.get(`${pathname}?${requestParams}`);
+  return data;
 };
 
 // export const getDataQuery = async (searchData, page = 1) => {
