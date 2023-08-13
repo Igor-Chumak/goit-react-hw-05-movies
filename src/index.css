@@ -28,3 +28,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.error>span {
+  text-decoration: underline;
+}
