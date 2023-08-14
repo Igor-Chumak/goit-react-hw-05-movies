@@ -19,8 +19,8 @@ export const CardMovie = ({ movieData, getGoBack }) => {
           poster_path !== null ? `${PATHNAME_MOVIE}${poster_path}` : DEFAULT_IMG
         }
         alt="poster"
-        width="160"
-        height="240"
+        width={250}
+        // height="240"
       />
       <h2>
         {title} ( {release_date.substr(0, 4)} )
