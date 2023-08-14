@@ -29,7 +29,6 @@ export const MovieDetails = () => {
       <div>
         <CardMovie movieData={movieData} getGoBack={getGoBack} />
         <AdditionalInfo />
-
         {isLoading && <Loader />}
         {isError && <div className="error">{isError} on Server. Sorry... </div>}
         <Outlet />
