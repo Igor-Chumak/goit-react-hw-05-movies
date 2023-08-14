@@ -2,12 +2,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
-  /* display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px; */
-  padding: 8px 0;
   margin-bottom: 16px;
+  padding: 8px 0;
   /* border-bottom: 1px solid black; */
   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
   /* box-shadow: 0px 4px 10px 4px #9e9e9e; */

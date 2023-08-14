@@ -15,12 +15,12 @@ axios.defaults.headers = {
 //   per_page: 12,
 // };
 
-export const getDataQuery = async (
+export const getDataQuery = async ({
   typeRequest,
   query = '',
   movie_id = null,
-  page = 1
-) => {
+  page = 1,
+}) => {
   const typeRequests = {
     getTrending: {
       url: 'trending/movie/day',
@@ -46,10 +46,16 @@ export const getDataQuery = async (
     },
   };
 
-  let pathname = typeRequests[typeRequest.url];
-  const requestParams = typeRequests[typeRequest].params;
-  //  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
+  let pathname = typeRequests[typeRequest].url;
+  //
+  // console.log('pathname :>> ', pathname);
+  // const requestParams = typeRequests[typeRequest].params;
+  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
+  //
+  // console.log('requestParams :>> ', requestParams);
+  //
   const { data } = await axios.get(`${pathname}?${requestParams}`);
+  console.log('data :>> ', data);
   return data;
 };
 

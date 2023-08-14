@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-// import styled from 'styled-components';
 import { Container, SharedLayout, Cast, Reviews } from 'components';
 import { Home, MovieDetails, Movies, NotFound } from 'pages';
 
