@@ -8,12 +8,9 @@ axios.defaults.headers = {
   accept: 'application/json',
   Authorization: `Bearer ${ACCESS_TOKEN}`,
 };
-// axios.defaults.params = {
-//   key: API_KEY,
-//   image_type: 'photo',
-//   orientation: 'horizontal',
-//   per_page: 12,
-// };
+axios.defaults.params = {
+  language: 'en-US',
+};
 
 export const getDataQuery = async ({
   typeRequest,
@@ -24,33 +21,43 @@ export const getDataQuery = async ({
   const typeRequests = {
     getTrending: {
       url: 'trending/movie/day',
-      params: { language: 'en-US' },
+      // params: { language: 'en-US' },
     },
     searchMovies: {
       url: 'search/movie',
       params: {
-        language: 'en-US',
+        // language: 'en-US',
         query: { query },
         include_adult: 'false',
         page: { page },
       },
     },
-    movieDetails: { url: `movie/${movie_id}`, params: { language: 'en-US' } },
+    movieDetails: {
+      url: `movie/${movie_id}`,
+      // params: {
+      //   language: 'en-US'
+      // },
+    },
     movieCredits: {
       url: `movie/${movie_id}/credits`,
-      params: { language: 'en-US' },
+      // params: {
+      //   language: 'en-US'
+      // },
     },
     movieReviews: {
       url: `movie/${movie_id}/reviews`,
-      params: { language: 'en-US', page: { page } },
+      params: {
+        // language: 'en-US',
+        page: { page },
+      },
     },
   };
 
   let pathname = typeRequests[typeRequest].url;
   //
   // console.log('pathname :>> ', pathname);
-  // const requestParams = typeRequests[typeRequest].params;
-  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
+  const requestParams = typeRequests[typeRequest].params ?? {};
+  // const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
   //
   // console.log('requestParams :>> ', requestParams);
   //
