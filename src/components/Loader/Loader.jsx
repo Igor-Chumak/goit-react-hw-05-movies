@@ -10,8 +10,8 @@ export const Loader = () => {
       ariaLabel="MagnifyingGlass-loading"
       wrapperStyle={{}}
       wrapperClass={css.loader}
-      glassColor="#c0efff"
-      color="#3f51b5"
+      glassColor="rgba(228, 228, 228, 0.1)"
+      color="red"
     />
   );
 };
