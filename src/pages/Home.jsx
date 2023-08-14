@@ -1,5 +1,4 @@
 import { Loader, TitleH1, MoviesList, getDataQuery } from 'components';
-// import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
@@ -26,5 +25,3 @@ export const Home = () => {
     </div>
   );
 };
-
-Home.propTypes = {};

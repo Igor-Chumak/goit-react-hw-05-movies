@@ -13,10 +13,16 @@ export const SharedLayout = () => {
           <NavLinkStyled to="movies">Movies</NavLinkStyled>
         </nav>
       </Header>
-      {/* <Suspense fallback={<Loader />}>
-        {' '} */}
       <Outlet />
-      {/* </Suspense> */}
     </div>
   );
 };
+
+//  {
+//    /* <Suspense fallback={<Loader />}>
+//     {' '} */
+//  }
+//  <Outlet />;
+//  {
+//    /* </Suspense> */
+//  }
