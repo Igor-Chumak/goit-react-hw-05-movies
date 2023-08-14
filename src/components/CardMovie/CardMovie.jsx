@@ -8,16 +8,13 @@ const PATHNAME_MOVIE = 'https://image.tmdb.org/t/p/w500/';
 export const CardMovie = ({ movieData, getGoBack }) => {
   const { poster_path, title, release_date, overview, genres, vote_average } =
     movieData;
-
   return (
     <Container>
       <Button type="button" onClick={getGoBack}>
         Go back
       </Button>
       <img
-        src={
-          poster_path !== null ? `${PATHNAME_MOVIE}${poster_path}` : DEFAULT_IMG
-        }
+        src={poster_path ? `${PATHNAME_MOVIE}${poster_path}` : DEFAULT_IMG}
         alt="poster"
         width={250}
         // height="240"
