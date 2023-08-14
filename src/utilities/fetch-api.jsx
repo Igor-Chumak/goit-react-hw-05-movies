@@ -55,7 +55,7 @@ export const getDataQuery = async ({
   // console.log('requestParams :>> ', requestParams);
   //
   const { data } = await axios.get(`${pathname}?${requestParams}`);
-  console.log('data :>> ', data);
+  console.log(typeRequest, '>> ', data);
   return data;
 };
 

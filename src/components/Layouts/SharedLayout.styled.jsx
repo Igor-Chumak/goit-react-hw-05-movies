@@ -8,9 +8,7 @@ export const Header = styled.header`
   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
   /* box-shadow: 0px 4px 10px 4px #9e9e9e; */
 
-  > nav {
-    margin-top: auto;
-    margin-bottom: auto;
+  & > nav {
     margin-left: 12px;
     display: flex;
     gap: 8px;
