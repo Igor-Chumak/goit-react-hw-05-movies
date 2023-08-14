@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-  border-bottom: 2px solid rgba(100, 100, 100, 0.5);
+  padding-bottom: 12px;
+  /* border-bottom: 1px solid rgba(100, 100, 100, 0.5); */
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -14,13 +15,8 @@ export const Title = styled.h3`
   font-size: 20px;
   font-weight: 500;
 `;
-// export const List = styled.ul`
-//   list-style: none;
-//   margin: 0;
-//   padding: 15px;
-// `;
+
 export const LinkStyled = styled(Link)`
-  margin-bottom: 6px;
   margin-left: 12px;
   padding: 4px;
   display: block;
@@ -36,7 +32,10 @@ export const LinkStyled = styled(Link)`
   &:hover {
     color: red;
     background-color: #e9e8e8;
-    /* transform: translateX(1%); */
+    transform: scale(1.02);
+  }
+  &:not(:last-child) {
+    margin-bottom: 6px;
     transform: scale(1.02);
   }
 `;

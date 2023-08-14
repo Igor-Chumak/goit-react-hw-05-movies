@@ -13,8 +13,8 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   margin-bottom: 6px;
-  padding: 4px 4px;
-  max-width: 100px;
+  padding: 4px;
+  width: 80px;
   border: 1px solid #d6d5d5;
   border-radius: 10px;
   background-color: inherit;
@@ -26,7 +26,6 @@ export const Button = styled.button`
   &:hover {
     color: red;
     background-color: #e9e8e8;
-    /* transform: translateX(1%); */
     transform: scale(1.02);
   }
 `;
