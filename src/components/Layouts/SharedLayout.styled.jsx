@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
   margin-top: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding: 8px 0;
   /* border-bottom: 1px solid black; */
   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
@@ -22,6 +22,7 @@ export const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  transition: 0.1s cubic-bezier(0.7, 0.98, 0.86, 0.98);
 
   &.active {
     color: red;

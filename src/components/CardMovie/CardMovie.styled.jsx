@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Wraper = styled.div`
-  padding: 12px;
+export const Wrapper = styled.div`
+  padding: 8px 12px 12px 12px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -11,7 +11,7 @@ export const Wraper = styled.div`
 `;
 
 export const Button = styled.button`
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   padding: 4px 4px;
   max-width: 100px;
   border: 1px solid #d6d5d5;

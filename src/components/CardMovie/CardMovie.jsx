@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Button, Wraper } from './CardMovie.styled';
+import { Button, Wrapper } from './CardMovie.styled';
 import DEFAULT_IMG from 'images/no_images_available-min.png';
 const PATHNAME_MOVIE = 'https://image.tmdb.org/t/p/w500/';
 // const DEFAULT_IMG =
@@ -13,7 +13,7 @@ export const CardMovie = ({ movieData, getGoBack }) => {
       <Button type="button" onClick={getGoBack}>
         &#60;&#60; Go back
       </Button>
-      <Wraper>
+      <Wrapper>
         <img
           src={poster_path ? `${PATHNAME_MOVIE}${poster_path}` : DEFAULT_IMG}
           alt="poster"
@@ -34,7 +34,7 @@ export const CardMovie = ({ movieData, getGoBack }) => {
             })}
           </p>
         </div>
-      </Wraper>
+      </Wrapper>
     </>
   );
 };
