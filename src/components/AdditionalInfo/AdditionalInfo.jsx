@@ -1,21 +1,12 @@
-// import { Link } from 'react-router-dom';
-import { Container, List, Link } from './AdditionalInfo.styled';
+import { Wrapper, Title, LinkStyled } from './AdditionalInfo.styled';
 
 export const AdditionalInfo = props => {
   return (
-    <Container>
-      <h3>Additional information</h3>
-      <List>
-        <li key="cast">
-          {' '}
-          <Link to="cast">Cast</Link>
-        </li>
-        <li key="reviews">
-          {' '}
-          <Link to="reviews">Reviews</Link>
-        </li>
-      </List>
-    </Container>
+    <Wrapper>
+      <Title>Additional information</Title>
+      <LinkStyled to="cast">Cast &#62;&#62;</LinkStyled>
+      <LinkStyled to="reviews">Reviews &#62;&#62;</LinkStyled>
+    </Wrapper>
   );
 };
 
