@@ -56,8 +56,7 @@ export const getDataQuery = async ({
   let pathname = typeRequests[typeRequest].url;
   //
   // console.log('pathname :>> ', pathname);
-  const requestParams = typeRequests[typeRequest].params ?? {};
-  // const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
+  const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
   //
   // console.log('requestParams :>> ', requestParams);
   //
@@ -65,20 +64,6 @@ export const getDataQuery = async ({
   console.log(typeRequest, '>> ', data);
   return data;
 };
-
-// export const getDataQuery = async (searchData, page = 1) => {
-//   const searchParams = new URLSearchParams({
-//     key: API_KEY,
-//     image_type: 'photo',
-//     orientation: 'horizontal',
-//     per_page: 12,
-//     q: searchData,
-//     page: page,
-//   });
-//   const { data } = await axios.get(`?${searchParams}`);
-//   //   const dataAPI = await axios.get(`?q=${searchData}&page=${page}`);
-//   return data;
-// };
 
 getDataQuery.propType = {
   typeRequest: PropTypes.string.isRequired,
