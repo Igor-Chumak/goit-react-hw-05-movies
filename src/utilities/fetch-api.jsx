@@ -44,11 +44,7 @@ export const getDataQuery = async ({
 
   let pathname = typeRequests[typeRequest].url;
   const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
-
   const { data } = await axios.get(`${pathname}?${requestParams}`);
-  //  to delete
-  console.log(typeRequest, '>> ', data);
-  //
   return data;
 };
 

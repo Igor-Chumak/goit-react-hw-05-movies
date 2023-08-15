@@ -31,7 +31,7 @@ Notify.init({
   },
 });
 
-export const Movies = () => {
+export const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [moviesList, setMoviesList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -45,9 +45,7 @@ export const Movies = () => {
       .then(response => {
         return response.results.length !== 0
           ? setMoviesList(response.results)
-          : Notify.warning(
-              'Sorry, there are no results for your search criteria'
-            );
+          : Notify.warning('Sorry, no results were found for your search');
       })
       .catch(error => {
         Notify.warning(error.message);

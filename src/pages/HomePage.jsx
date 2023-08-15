@@ -1,7 +1,7 @@
 import { Loader, TitleH1, MoviesList, getDataQuery, Error } from 'components';
 import { useEffect, useState } from 'react';
 
-export const Home = () => {
+export const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');

@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 
-export const MovieDetails = () => {
+export const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchForm = styled.form`
+  margin-bottom: 12px;
   max-width: 400px;
   width: 100%;
   display: flex;

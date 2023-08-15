@@ -8,14 +8,15 @@ export const FormSearch = ({ setSearchParams }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
-    let inputValueNormalize = inputValue.trim().toLowerCase();
+    // const form = e.currentTarget;
+    let inputValueNormalize = inputValue.trim();
     if (!inputValueNormalize) return;
-    if (!setSearchParams(inputValueNormalize)) {
-      return;
-    }
-    form.reset();
-    setInputValue('');
+    setSearchParams({ query: inputValueNormalize });
+    // if (!setSearchParams({ query: inputValueNormalize })) {
+    //   return;
+    // }
+    // form.reset();
+    // setInputValue('');
   };
 
   const handleChangeInput = e => {
@@ -39,5 +40,5 @@ export const FormSearch = ({ setSearchParams }) => {
 };
 
 FormSearch.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  setSearchParams: PropTypes.func.isRequired,
 };
