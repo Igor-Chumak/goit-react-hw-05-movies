@@ -22,7 +22,7 @@ export const CardMovie = ({ movieData, getGoBack }) => {
           <h2>
             {title} ( {release_date.substr(0, 4)} )
           </h2>
-          <p>User score: {Math.floor(vote_average)}%</p>
+          <p>User score: {Math.round(vote_average * 10)}%</p>
           <h3>Overview</h3>
           <p>{overview}</p>
           <h4>Genres</h4>

@@ -1,24 +1,25 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'components';
 import { SearchForm, SearchFormInput } from './FormSearch.styled';
 
 export const FormSearch = ({ setSearchParams }) => {
-  const [inputValue, setInputValue] = useState('');
+  // const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const form = e.currentTarget;
-    let inputValueNormalize = inputValue.trim();
+    const form = e.currentTarget;
+    // let inputValueNormalize = inputValue.trim();
+    let inputValueNormalize = form.elements.search.value.trim();
     if (!inputValueNormalize) return;
     setSearchParams({ query: inputValueNormalize });
-    // form.reset();
+    form.reset();
     // setInputValue('');
   };
 
-  const handleChangeInput = e => {
-    return setInputValue(e.target.value);
-  };
+  // const handleChangeInput = e => {
+  //   return setInputValue(e.target.value);
+  // };
 
   return (
     <SearchForm onSubmit={handleSubmit}>
@@ -28,7 +29,7 @@ export const FormSearch = ({ setSearchParams }) => {
         autoComplete="off"
         autoFocus
         placeholder="Search movie"
-        onChange={handleChangeInput}
+        // onChange={handleChangeInput}
         required
       />
       <Button type="submit">Search</Button>
