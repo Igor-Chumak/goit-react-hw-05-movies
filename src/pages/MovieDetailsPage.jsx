@@ -47,3 +47,5 @@ export const MovieDetailsPage = () => {
     )
   );
 };
+
+export default MovieDetailsPage;
