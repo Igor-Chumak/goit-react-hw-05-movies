@@ -13,6 +13,7 @@ export const Cast = () => {
   const [isError, setIsError] = useState('');
 
   useEffect(() => {
+    if (!movieId) return;
     setIsLoading(true);
     getDataQuery({ typeRequest: 'movieCredits', movie_id: movieId })
       .then(response => {
