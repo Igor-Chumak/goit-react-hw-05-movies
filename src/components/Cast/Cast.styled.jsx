@@ -32,11 +32,11 @@ export const Name = styled.p`
   margin-top: 0;
   margin-bottom: 12px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 `;
 
 export const Character = styled(Name)`
-  font-weight: 200;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 14px;
 `;
