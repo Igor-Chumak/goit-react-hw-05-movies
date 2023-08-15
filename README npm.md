@@ -3,20 +3,42 @@
 - npm install styled-components >>> import styled from 'styled-components';
 - npm npm install --save nanoid >>> import { nanoid } from 'nanoid';
 - npm i notiflix >>> import { Notify } from'notiflix/build/notiflix-notify-aio';
-  <!-- const notifyWarning = {
+  <!-- Notify.init({
     width: '500px',
     fontSize: '25px',
     position: 'center-top',
-    opacity: 0.7,
-    timeout: 1500,
-  }; -->
-  <!-- const notifySuccess = {
+    timeout: '2000',
+    messageMaxLength: 150,
+    distance: '20px',
+    showOnlyTheLastOne: true,
+    clickToClose: true,
+    closeButton: true,
+    opacity: 1,
+    warning: {
+      background: '#af3e86',
+      textColor: '#fff',
+      childClassName: 'notiflix-notify-warning',
+      notiflixIconColor: 'rgba(0, 0, 0, 0.466)',
+      fontAwesomeClassName: 'fas fa-exclamation-circle',
+      fontAwesomeIconColor: 'rgba(0,0,0,1)',
+      backOverlayColor: 'rgba(238,191,49,0.2)',
+    },
+  }); -->
+    <!-- const notifyWarning = {
       width: '500px',
-      timeout: '5000',
       fontSize: '25px',
       position: 'center-top',
       opacity: 0.7,
-  }; -->
+      timeout: 1500,
+    }; -->
+    <!-- const notifySuccess = {
+        width: '500px',
+        timeout: '5000',
+        fontSize: '25px',
+        position: 'center-top',
+        opacity: 0.7,
+    }; -->
+
 - npm install axios >>> import axios from "axios";
 - npm install react-loader-spinner --save >>> import { Vortex } from
   'react-loader-spinner';
