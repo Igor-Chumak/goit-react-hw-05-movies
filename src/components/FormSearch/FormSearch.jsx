@@ -12,9 +12,6 @@ export const FormSearch = ({ setSearchParams }) => {
     let inputValueNormalize = inputValue.trim();
     if (!inputValueNormalize) return;
     setSearchParams({ query: inputValueNormalize });
-    // if (!setSearchParams({ query: inputValueNormalize })) {
-    //   return;
-    // }
     // form.reset();
     // setInputValue('');
   };
