@@ -36,7 +36,7 @@ export const MovieDetails = () => {
         <CardMovie movieData={movieData} getGoBack={getGoBack} />
         <AdditionalInfo />
         {isLoading && <Loader />}
-        {isError && <Error error={isError} />}
+        {isError && <Error textError={`${isError} on Server. Sorry...`} />}
         <Outlet />
       </div>
     )

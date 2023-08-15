@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Button, Wrapper } from './CardMovie.styled';
+import { Button } from 'components';
+import { Wrapper } from './CardMovie.styled';
 import DEFAULT_IMG from 'images/no_images_available.png';
 const PATHNAME_MOVIE = 'https://image.tmdb.org/t/p/w500/';
 

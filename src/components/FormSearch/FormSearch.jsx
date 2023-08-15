@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'components';
+import { SearchForm, SearchFormInput } from './FormSearch.styled';
 
-export const FormSearch = ({ onSubmit }) => {
+export const FormSearch = ({ setSearchParams }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = e => {
@@ -9,7 +11,7 @@ export const FormSearch = ({ onSubmit }) => {
     const form = e.currentTarget;
     let inputValueNormalize = inputValue.trim().toLowerCase();
     if (!inputValueNormalize) return;
-    if (!onSubmit(inputValueNormalize)) {
+    if (!setSearchParams(inputValueNormalize)) {
       return;
     }
     form.reset();
@@ -21,26 +23,21 @@ export const FormSearch = ({ onSubmit }) => {
   };
 
   return (
-    <header className={Searchbar}>
-      <form className={SearchForm} onSubmit={handleSubmit}>
-        <button type="submit" className={SearchFormButton}>
-          <span className={SearchFormButton_label}>Search</span>
-        </button>
-        <input
-          className={SearchFormInput}
-          name="search"
-          type="text"
-          autoComplete="off"
-          autoFocus
-          placeholder="Search images and photos"
-          onChange={handleChangeInput}
-          required
-        />
-      </form>
-    </header>
+    <SearchForm onSubmit={handleSubmit}>
+      <SearchFormInput
+        name="search"
+        type="text"
+        autoComplete="off"
+        autoFocus
+        placeholder="Search movie"
+        onChange={handleChangeInput}
+        required
+      />
+      <Button type="submit">Search</Button>
+    </SearchForm>
   );
 };
 
-Searchbar.propTypes = {
+FormSearch.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };

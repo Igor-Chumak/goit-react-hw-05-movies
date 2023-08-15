@@ -44,7 +44,7 @@ export const Reviews = () => {
         !isError && <h4>We don't have any reviews for this movie</h4>
       )}
       {isLoading && <Loader />}
-      {isError && <Error error={isError} />}
+      {isError && <Error textError={`${isError} on Server. Sorry...`} />}
     </>
   );
 };

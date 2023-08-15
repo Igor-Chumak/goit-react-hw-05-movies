@@ -21,7 +21,7 @@ export const Home = () => {
       <TitleH1>Trending today</TitleH1>
       <MoviesList movies={movies} />
       {isLoading && <Loader />}
-      {isError && <Error error={isError} />}
+      {isError && <Error textError={`${isError} on Server. Sorry...`} />}
     </div>
   );
 };

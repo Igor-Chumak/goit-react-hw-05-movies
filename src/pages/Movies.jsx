@@ -61,7 +61,7 @@ export const Movies = () => {
       <FormSearch setSearchParams={setSearchParams} />
       <MoviesList movies={moviesList} />
       {isLoading && <Loader />}
-      {isError && <Error error={isError} />}
+      {isError && <Error textError={`${isError} on Server. Sorry...`} />}
     </div>
   );
 };

@@ -19,9 +19,9 @@ export const Header = styled.header`
 export const NavLinkStyled = styled(NavLink)`
   padding: 8px 12px;
   border-radius: 8px;
-  text-decoration: none;
   color: black;
   font-weight: 500;
+  text-decoration: none;
   transition: 0.1s cubic-bezier(0.7, 0.98, 0.86, 0.98);
 
   &.active {
