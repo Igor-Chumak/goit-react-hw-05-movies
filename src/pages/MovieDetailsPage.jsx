@@ -5,7 +5,7 @@ import {
   AdditionalInfo,
   Error,
 } from 'components';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
@@ -16,8 +16,7 @@ export const MovieDetailsPage = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const backLink = location.state?.from ?? '/';
-  console.log('get Go Back >>', backLink);
+  const backLink = useRef(location.state?.from ?? '/').current;
 
   useEffect(() => {
     if (!movieId) return;
