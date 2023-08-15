@@ -1,6 +1,7 @@
-// import { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header, NavLinkStyled } from './SharedLayout.styled';
+import { Loader } from 'components';
 
 export const SharedLayout = () => {
   return (
@@ -13,16 +14,9 @@ export const SharedLayout = () => {
           <NavLinkStyled to="movies">Movies</NavLinkStyled>
         </nav>
       </Header>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
-
-//  {
-//    /* <Suspense fallback={<Loader />}>
-//     {' '} */
-//  }
-//  <Outlet />;
-//  {
-//    /* </Suspense> */
-//  }

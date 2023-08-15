@@ -53,7 +53,6 @@ export const Cast = () => {
       ) : (
         !isError && <h4>Sorry, no information about cast </h4>
       )}
-
       {isLoading && <Loader />}
       {isError && <Error textError={`${isError} on Server. Sorry...`} />}
     </>

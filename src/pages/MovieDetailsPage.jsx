@@ -5,7 +5,7 @@ import {
   AdditionalInfo,
   Error,
 } from 'components';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
@@ -40,12 +40,10 @@ export const MovieDetailsPage = () => {
         <AdditionalInfo />
         {isLoading && <Loader />}
         {isError && <Error textError={`${isError} on Server. Sorry...`} />}
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </div>
     )
   );
 };
-
-// <Suspense fallback={<Loader />}>
-//   <Outlet />
-// </Suspense>;
