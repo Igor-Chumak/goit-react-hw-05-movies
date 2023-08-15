@@ -8,4 +8,5 @@ export * from 'components/AdditionalInfo/AdditionalInfo';
 export * from 'components/Cast/Cast';
 export * from 'components/Reviews/Reviews';
 export * from 'components/Loader/Loader';
+export * from 'components/Error/Error';
 export * from 'utilities/fetch-api';

@@ -21,47 +21,34 @@ export const getDataQuery = async ({
   const typeRequests = {
     getTrending: {
       url: 'trending/movie/day',
-      // params: { language: 'en-US' },
     },
     searchMovies: {
       url: 'search/movie',
       params: {
-        // language: 'en-US',
-        query: { query },
+        query,
         include_adult: 'false',
-        page: { page },
+        page,
       },
     },
     movieDetails: {
       url: `movie/${movie_id}`,
-      // params: {
-      //   language: 'en-US'
-      // },
     },
     movieCredits: {
       url: `movie/${movie_id}/credits`,
-      // params: {
-      //   language: 'en-US'
-      // },
     },
     movieReviews: {
       url: `movie/${movie_id}/reviews`,
-      params: {
-        // language: 'en-US',
-        page: { page },
-      },
+      params: { page },
     },
   };
 
   let pathname = typeRequests[typeRequest].url;
-  //
-  // console.log('pathname :>> ', pathname);
   const requestParams = new URLSearchParams(typeRequests[typeRequest].params);
-  //
-  // console.log('requestParams :>> ', requestParams);
-  //
+
   const { data } = await axios.get(`${pathname}?${requestParams}`);
+  //  to delete
   console.log(typeRequest, '>> ', data);
+  //
   return data;
 };
 

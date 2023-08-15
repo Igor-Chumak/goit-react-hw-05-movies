@@ -1,4 +1,4 @@
-import { Loader, TitleH1, MoviesList, getDataQuery } from 'components';
+import { Loader, TitleH1, MoviesList, getDataQuery, Error } from 'components';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
@@ -21,7 +21,7 @@ export const Home = () => {
       <TitleH1>Trending today</TitleH1>
       <MoviesList movies={movies} />
       {isLoading && <Loader />}
-      {isError && <div className="error">{isError} on Server. Sorry... </div>}
+      {isError && <Error error={isError} />}
     </div>
   );
 };

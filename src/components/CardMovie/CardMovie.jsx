@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import { Button, Wrapper } from './CardMovie.styled';
-import DEFAULT_IMG from 'images/no_images_available-min.png';
+import DEFAULT_IMG from 'images/no_images_available.png';
 const PATHNAME_MOVIE = 'https://image.tmdb.org/t/p/w500/';
-// const DEFAULT_IMG =
-//     '<https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700>';
 
 export const CardMovie = ({ movieData, getGoBack }) => {
   const { poster_path, title, release_date, overview, genres, vote_average } =

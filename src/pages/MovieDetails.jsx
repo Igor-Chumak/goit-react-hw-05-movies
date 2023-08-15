@@ -1,4 +1,10 @@
-import { Loader, CardMovie, getDataQuery, AdditionalInfo } from 'components';
+import {
+  Loader,
+  CardMovie,
+  getDataQuery,
+  AdditionalInfo,
+  Error,
+} from 'components';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 
@@ -30,7 +36,7 @@ export const MovieDetails = () => {
         <CardMovie movieData={movieData} getGoBack={getGoBack} />
         <AdditionalInfo />
         {isLoading && <Loader />}
-        {isError && <div className="error">{isError} on Server. Sorry... </div>}
+        {isError && <Error error={isError} />}
         <Outlet />
       </div>
     )

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
+  margin-bottom: 12px;
   padding-bottom: 12px;
   /* border-bottom: 1px solid rgba(100, 100, 100, 0.5); */
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
@@ -11,7 +12,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h3`
   margin-top: 0;
   margin-bottom: 12px;
-  margin-left: 40px;
+  margin-left: 28px;
   font-size: 20px;
   font-weight: 500;
 `;
