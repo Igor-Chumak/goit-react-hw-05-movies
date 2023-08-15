@@ -6,13 +6,18 @@ import {
   Error,
 } from 'components';
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 export const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState('');
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const backLink = location.state?.from ?? '/';
+  console.log('get Go Back >>', backLink);
 
   useEffect(() => {
     if (!movieId) return;
@@ -26,8 +31,7 @@ export const MovieDetailsPage = () => {
   }, [movieId]);
 
   function getGoBack() {
-    console.log('get Go Back');
-    // navigate(backLinkHref.current);
+    navigate(backLink);
   }
 
   return (
@@ -42,10 +46,6 @@ export const MovieDetailsPage = () => {
     )
   );
 };
-
-// const location = useLocation();
-// const backLinkHref = useRef(location.state?.from ?? '/movies');
-// const navigate = useNavigate();
 
 // <Suspense fallback={<Loader />}>
 //   <Outlet />
