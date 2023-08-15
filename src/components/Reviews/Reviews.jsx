@@ -23,9 +23,9 @@ export const Reviews = () => {
       .finally(setIsLoading(false));
   }, [movieId]);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 700);
-  // }, [reviews]);
+  useEffect(() => {
+    window.scrollTo(0, 700);
+  }, [reviews]);
 
   return (
     <>
