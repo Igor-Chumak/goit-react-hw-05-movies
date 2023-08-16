@@ -42,22 +42,26 @@
 - npm install axios >>> import axios from "axios";
 - npm install react-loader-spinner --save >>> import { Vortex } from
   'react-loader-spinner';
-  <!-- <MagnifyingGlass
-    visible={true}
-    height="80"
-    width="80"
-    ariaLabel="MagnifyingGlass-loading"
-    wrapperStyle={{}}
-    wrapperClass="MagnifyingGlass-wrapper"
-    glassColor = '#c0efff'
-    color = '#e15b64'
-  /> -->
-  <!-- <Vortex
-    visible={true}
-    height="80"
-    width="80"
-    ariaLabel="vortex-loading"
-    wrapperStyle={{}}
-    wrapperClass="vortex-wrapper"
-    colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-  /> -->
+    <!-- <MagnifyingGlass
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="MagnifyingGlass-loading"
+      wrapperStyle={{}}
+      wrapperClass="MagnifyingGlass-wrapper"
+      glassColor = '#c0efff'
+      color = '#e15b64'
+    /> -->
+    <!-- <Vortex
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="vortex-loading"
+      wrapperStyle={{}}
+      wrapperClass="vortex-wrapper"
+      colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+    /> -->
+  - npm install react-scroll-up
+  <!-- <ScrollToTop showUnder={160}>
+  <span>UP</span>
+  </ScrollToTop> -->

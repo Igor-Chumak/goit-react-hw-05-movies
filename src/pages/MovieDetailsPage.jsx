@@ -1,9 +1,11 @@
+import ScrollToTop from 'react-scroll-up';
 import {
   Loader,
   CardMovie,
   getDataQuery,
   AdditionalInfo,
   Error,
+  ScrollUp,
 } from 'components';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -43,6 +45,9 @@ export const MovieDetailsPage = () => {
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
+        <ScrollToTop showUnder={160}>
+          <ScrollUp></ScrollUp>
+        </ScrollToTop>
       </div>
     )
   );

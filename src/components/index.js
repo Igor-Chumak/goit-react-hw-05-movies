@@ -11,4 +11,5 @@ export * from 'components/Reviews/Reviews';
 export * from 'components/Loader/Loader';
 export * from 'components/Error/Error';
 export * from 'components/Button/Button.styled';
+export * from 'components/ScrollUp/ScrollUp.styled';
 export * from 'utilities/fetch-api';
