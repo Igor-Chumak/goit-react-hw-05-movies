@@ -11,7 +11,7 @@ export const ScrollUp = styled.div`
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 1;
+  opacity: 0.5;
   outline: none;
   background-image: url(${imgButton});
   &:focus,
